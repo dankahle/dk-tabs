@@ -1,0 +1,23 @@
+
+
+
+.tab-header {
+  display: inline-block;
+  height: 40px;
+  width: 50px;
+  border: 1px solid;
+  border-bottom: 1px white;
+  margin-bottom: -1px;
+  &:not(:first-of-type) {
+    border-left: 1px white;
+    margin-left: -1px;
+  }
+  &.active {
+    background-color: plum;
+  }
+}
+
+.tab-container {
+  border: 1px solid;
+  min-height: 200px;
+}

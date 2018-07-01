@@ -1,0 +1,10 @@
+
+
+<div *ngFor="let tab of tabs" class="tab-header" (click)="showTab(tab)"
+    [class.active]="tab === selectedTab">
+  {{tab.name}}
+</div>
+<div class="tab-container">
+  <ng-content></ng-content>
+</div>
+
