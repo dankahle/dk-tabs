@@ -18,23 +18,22 @@ export class TabsComponent implements OnInit, AfterContentInit {
   ngAfterContentInit() {
     if (this.tabs.length) {
       this.tabs.forEach(t => {
-        console.log(t);
-        if (t.show) {
+        if (t.selected) {
           this.selectedTab = t;
         }
       })
       if (!this.selectedTab) {
-        this.tabs.first.show = true;
+        this.tabs.first.selected = true;
         this.selectedTab = this.tabs.first;
       }
     }
   }
 
-  showTab(tab: TabComponent) {
+  selectTab(tab: TabComponent) {
     if (tab !== this.selectedTab) {
-      this.selectedTab.show = false;
+      this.selectedTab.selected = false;
       this.selectedTab = tab;
-      tab.show = true;
+      tab.selected = true;
     }
   }
 

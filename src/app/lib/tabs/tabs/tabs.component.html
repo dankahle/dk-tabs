@@ -1,6 +1,6 @@
 
 
-<div *ngFor="let tab of tabs" class="tab-header" (click)="showTab(tab)"
+<div *ngFor="let tab of tabs" class="tab-header" (click)="selectTab(tab)"
     [class.active]="tab === selectedTab">
   {{tab.name}}
 </div>
